@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zane Zhang | Personal Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- ======== 导航栏 ======== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Home<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#research">Project</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#misc">Misc</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======== Hero 区域 ======== -->
+    <header class="hero" id="about">
+        <div class="hero-container">
+            <div class="hero-text">
+                <p class="hero-greeting">Hi there, I'm 👋</p>
+                <h1 class="hero-name">
+                    Zane Zhang（张正远）
+                </h1>
+                <p class="hero-tagline">
+                    Undergraduate @ <span class="highlight">Tsinghua University</span><br>
+                    Interested in <span class="highlight">CAD Geometric Modeling | Industrial Software</span>
+                </p>
+                <p class="hero-bio">
+                    清华大学笃实书院本科生，IISE/DAIS 会员，软件工程、航空航天工程与工业工程交叉背景。对工程软件与 CAD 相关方向保持长期兴趣，目前重点夯实 C / C++ / Python 与数据结构算法基础，并在数值计算与工程软件环境配置方面进行实践。
+                </p>
+                <div class="hero-links">
+                    <a href="mailto:zhangzy24@mails.tsinghua.edu.cn" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="https://github.com/Zhang-Zhengyuan" class="btn btn-outline" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <!-- ✏️ 替换为你的头像照片路径 -->
+                <div class="avatar-wrapper">
+                    <img src="assets/avatar.jpg" alt="Profile Photo" 
+                         onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');">
+                    <div class="avatar-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== 教育经历 ======== -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">🎓</span> Education
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <div class="edu-header">
+                            <div>
+                                <h3>清华大学 (Tsinghua University)</h3>
+                                <p class="edu-degree">笃实书院 (软件工程 | 工业工程 | 航空航天工程)</p>
+                            </div>
+                            <span class="edu-date">2024 — 2028 (expected)</span>
+                        </div>
+                        <p class="edu-detail">                           <strong>相关课程：</strong> 程序设计（C/C++/Python）、数据结构、离散数学、数值分析、计算机组成原理、操作系统、人工智能基础（在修）。
+                            <br>
+                            <strong>说明：</strong> C/C++/Python 与数据结构算法能力绝赞提升中，同时补强数值计算基础，目标与兴趣是能参与工程级别的 CAD / 数据库相关研究与实现工作。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== 研究经历 / 项目 ======== -->
+    <section class="section section-alt" id="research">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">🔬</span> Projects
+            </h2>
+            <div class="research-grid">
+                <div class="card research-card">
+                    <div class="research-tag project">Course Project</div>
+                    <h3>SourceHunter</h3>
+                    <p class="research-meta">
+                        Course: 创意软件 &nbsp;·&nbsp; 2024 Autumn
+                    </p>
+                    <p>
+                        SourceHunter is an innovative application that enables seamless conversion between text, images, videos, and audio files, facilitating efficient multimedia communication.
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="https://github.com/Zhang-Zhengyuan/SourceHunter"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="card research-card">
+                    <div class="research-tag project">Course Project</div>
+                    <h3>Pokemon Backpack-Battles</h3>
+                    <p class="research-meta">
+                        Course: 程序设计基础 &nbsp;·&nbsp; 2024 Autumn
+                    </p>
+                    <p>
+                        Pokemon Backpack Battles is a C/C++ puzzle-game prototype focused on backpack/inventory management and battle mechanics, contains core game logic and a Visual Studio solution. 
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">C/C++</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="https://github.com/Zhang-Zhengyuan/Pokemon-Backpack-Battles"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="card research-card">
+                    <div class="research-tag project">Course Project</div>
+                    <h3>子龙</h3>
+                    <p class="research-meta">
+                        Course: 程序设计进阶 &nbsp;·&nbsp; 2025 Autumn
+                    </p>
+                    <p>
+                        基于三国杀规则引擎扩展的单机战役项目。项目在原有规则与渲染框架上，设计并实现了章节化战役系统、双 AI 协同（策略观察 + 叙事史官）与情绪驱动对话，完整实现了玩家前端交互（选牌/选目标/弃牌）并支持 GUI 与批处理测试模式。 
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">AI</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="https://git.tsinghua.edu.cn/programming-advanced/2025/git-hw-zhangzy24"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="card research-card">
+                    <div class="research-tag project">Personal Project</div>
+                    <h3>Light of Life</h3>
+                    <p class="research-meta">
+                        2026.01 — 2026.03
+                    </p>
+                    <p>
+                        Light of Life is an interactive generative art app designed for the Swift Student Challenge. Using L-System fractal algorithms, life grows toward the light, forming unique organic patterns. Every creation is a one-of-a-kind journey of life.
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Swift/SwiftUI</span>
+                        <span class="tag">Generative Art</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="https://github.com/Zhang-Zhengyuan/2026Apple"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+                <div class="card research-card">
+                    <div class="research-tag project">Group Project</div>
+                    <h3>Dynamic Frontier Pareto-Driven Optimization for Lunar Material Transport under SESA-GMCM Framework</h3>
+                    <p class="research-meta">
+                        2026.02
+                    </p>
+                    <p>
+                        A transport-analysis for building a 100,000-person lunar colony by 2050, comparing space-elevator, rocket, and hybrid delivery via three models (static benchmark, dynamic allocation, stochastic robustness); the dynamic hybrid strategy best balances time, cost and environmental impact.
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Space Elevator</span>
+                        <span class="tag">Dynamic Hybrid Strategy</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="https://github.com/Guo-Yuhao/MCM------"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== 论文 / 发表 ======== -->
+    <section class="section" id="publications">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">📄</span> Publications
+            </h2>
+            <p class="section-subtitle">
+                （暂无正式论文发表，正在学习并计划参与相关研究）
+            </p>
+            <div class="pub-list">
+                <p class="empty-state">
+                    🚧 Working on it... Stay tuned!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== 杂项 / 个人兴趣 ======== -->
+    <section class="section section-alt" id="misc">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">✨</span> Miscellaneous
+            </h2>
+            <div class="misc-grid">
+                <div class="card misc-card">
+                    <h3>🏆 Competitions & Honors</h3>
+                    <ul>
+                        <li>MCM/ICM - Participant - 2026</li>
+                        <li>Swift Student Challenge - Participant - 2026</li>
+                        <li>IISE/DAIS Data Analytics Competition - Participant - 2026</li>
+                        <li>清华之友黄奕聪伉俪奖学金 - 2025</li>
+                        <li>笃实书院海外实践支队长 - 2025</li>
+                    </ul>
+                </div>
+                <div class="card misc-card">
+                    <h3>💻 Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">C/C++</span>
+                        <span class="tag">Swift</span>
+                        <span class="tag">LaTeX</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Git</span>
+                    </div>
+                </div>
+                <div class="card misc-card">
+                    <h3>🎵 Beyond Academics</h3>
+                    <p>
+                        When I'm not coding, I enjoy 
+                        <strong>photography</strong> 📸, 
+                        <strong>hiking</strong> 🏔️, and 
+                        <strong>playing guitar</strong> 🎸. And also <strong>games</strong>, particularly the souls-like game.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== 页脚 ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>
+                    &copy; 2026 Zane Zhang &nbsp;·&nbsp; 
+                    Built with coffee and curiosity
+                </p>
+                <div class="footer-links">
+                    <a href="mailto:zhangzy24@mails.tsinghua.edu.cn"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Zhang-Zhengyuan" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
