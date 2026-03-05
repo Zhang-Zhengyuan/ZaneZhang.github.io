@@ -15,16 +15,19 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo">Home<span class="dot">.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#research">Project</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#misc">Misc</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#research">Project</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#misc">Misc</a></li>
+                </ul>
+                <button class="lang-switch" id="langSwitch" type="button" aria-label="切换到英文">EN</button>
+                <button class="nav-toggle" id="navToggle" aria-label="切换导航菜单">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -185,6 +188,25 @@
                         <a href="https://github.com/Guo-Yuhao/MCM------"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
+
+                <div class="card research-card">
+                    <div class="research-tag project">Group Project</div>
+                    <h3>MarsCar</h3>
+                    <p class="research-meta">
+                        2025.07
+                    </p>
+                    <p>
+                        基于 Python 的机器人小车控制项目，包含底盘、舵机与机械臂控制模块，支持 UART / PS2 等外设并提供演示入口。我为项目增加了摄像头传感器并实现了网络遥控器功能，支持局域网视频流与远程操控，便于嵌入式控制验证与远程演示。
+                    </p>
+                    <div class="research-tags">
+                        <span class="tag">Embedded Systems</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <div class="research-links">
+                        <a href="https://github.com/TinSelenosilicate/MarsCar"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+
 
             </div>
         </div>
