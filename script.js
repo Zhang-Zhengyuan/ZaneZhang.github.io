@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projectPersonal: '个人项目',
             projectGroup: '小组项目',
             projectCode: '代码',
+            projectPaper: '论文',
             p1Meta: '课程：创意软件 &nbsp;·&nbsp; 2024 秋',
             p1Desc: 'SourceHunter 是一个支持文本、图像、视频与音频之间转换的应用，旨在提升多媒体表达与交流效率。',
             p2Meta: '课程：程序设计基础 &nbsp;·&nbsp; 2024 秋',
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projectPersonal: 'Personal Project',
             projectGroup: 'Group Project',
             projectCode: 'Code',
+            projectPaper: 'Paper',
             p1Meta: 'Course: Creative Software &nbsp;·&nbsp; 2024 Autumn',
             p1Desc: 'SourceHunter is an application that enables conversion among text, images, videos, and audio files to improve multimedia communication efficiency.',
             p2Meta: 'Course: Introduction to Programming &nbsp;·&nbsp; 2024 Autumn',
@@ -193,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setHTML('#research .research-card:nth-child(2) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
             setHTML('#research .research-card:nth-child(3) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
             setHTML('#research .research-card:nth-child(4) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
-            setHTML('#research .research-card:nth-child(5) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
+            setHTML('#research .research-card:nth-child(5) .research-links a', `<i class="fas fa-file-alt"></i> ${t.projectPaper}`);
             setHTML('#research .research-card:nth-child(6) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
 
             setHTML('#publications .section-title', t.publicationsTitle);

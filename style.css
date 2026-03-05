@@ -798,6 +798,7 @@ h3 { font-size: 1.15rem; font-family: var(--font-sans); font-weight: 600; }
 .reveal-children.visible > *:nth-child(3) { transition-delay: 0.3s; }
 .reveal-children.visible > *:nth-child(4) { transition-delay: 0.4s; }
 .reveal-children.visible > *:nth-child(5) { transition-delay: 0.5s; }
+.reveal-children.visible > *:nth-child(6) { transition-delay: 0.6s; }
 
 .reveal-children.visible > * {
     opacity: 1;
