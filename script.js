@@ -137,121 +137,136 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const applyLanguage = (language) => {
-        const t = translations[language] || translations.zh;
-
-        document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-        document.title = t.pageTitle;
-
-        setHTML('.nav-logo', `${t.navLogo}<span class="dot">.</span>`);
-        setText('.nav-links a[href="#about"]', t.navAbout);
-        setText('.nav-links a[href="#education"]', t.navEducation);
-        setText('.nav-links a[href="#research"]', t.navProjects);
-        setText('.nav-links a[href="#publications"]', t.navPublications);
-        setText('.nav-links a[href="#misc"]', t.navMisc);
-
-        setText('.hero-greeting', t.heroGreeting);
-        setHTML('.hero-tagline', t.heroTagline);
-        setText('.hero-bio', t.heroBio);
-        setHTML('.hero-links .btn-primary', t.emailBtn);
-        setHTML('.hero-links .btn-outline', t.githubBtn);
-        setAttr('.avatar-wrapper img', 'alt', t.avatarAlt);
-
-        setAttr('#navToggle', 'aria-label', t.navToggleAria);
-        setAttr('#backToTop', 'aria-label', t.backToTopAria);
-
-        setHTML('#education .section-title', t.educationTitle);
-        setText('#education .edu-header h3', t.eduSchool);
-        setText('#education .edu-degree', t.eduDegree);
-        setText('#education .edu-date', t.eduDate);
-        setHTML('#education .edu-detail', t.eduDetail);
-
-        setHTML('#research .section-title', t.projectsTitle);
-        setText('#research .research-card:nth-child(1) .research-tag', t.projectCourse);
-        setHTML('#research .research-card:nth-child(1) .research-meta', t.p1Meta);
-        setText('#research .research-card:nth-child(1) > p:not(.research-meta)', t.p1Desc);
-
-        setText('#research .research-card:nth-child(2) .research-tag', t.projectCourse);
-        setHTML('#research .research-card:nth-child(2) .research-meta', t.p2Meta);
-        setText('#research .research-card:nth-child(2) > p:not(.research-meta)', t.p2Desc);
-
-        setText('#research .research-card:nth-child(3) .research-tag', t.projectCourse);
-        setText('#research .research-card:nth-child(3) h3', t.p3Name);
-        setHTML('#research .research-card:nth-child(3) .research-meta', t.p3Meta);
-        setText('#research .research-card:nth-child(3) > p:not(.research-meta)', t.p3Desc);
-
-        setText('#research .research-card:nth-child(4) .research-tag', t.projectPersonal);
-        setText('#research .research-card:nth-child(4) > p:not(.research-meta)', t.p4Desc);
-
-        setText('#research .research-card:nth-child(5) .research-tag', t.projectGroup);
-        setText('#research .research-card:nth-child(5) > p:not(.research-meta)', t.p5Desc);
-
-        setText('#research .research-card:nth-child(6) .research-tag', t.projectGroup);
-        setText('#research .research-card:nth-child(6) > p:not(.research-meta)', t.p6Desc);
-
-        setHTML('#research .research-card:nth-child(1) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
-        setHTML('#research .research-card:nth-child(2) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
-        setHTML('#research .research-card:nth-child(3) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
-        setHTML('#research .research-card:nth-child(4) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
-        setHTML('#research .research-card:nth-child(5) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
-        setHTML('#research .research-card:nth-child(6) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
-
-        setHTML('#publications .section-title', t.publicationsTitle);
-        setText('#publications .section-subtitle', t.publicationsSubtitle);
-        setText('#publications .empty-state', t.publicationsEmpty);
-
-        setHTML('#misc .section-title', t.miscTitle);
-        setText('#misc .misc-card:nth-child(1) h3', t.miscHonorTitle);
-        setText('#misc .misc-card:nth-child(2) h3', t.miscSkillsTitle);
-        setText('#misc .misc-card:nth-child(3) h3', t.miscBeyondTitle);
-        setText('#misc .misc-card:nth-child(1) li:nth-child(1)', t.honor1);
-        setText('#misc .misc-card:nth-child(1) li:nth-child(2)', t.honor2);
-        setText('#misc .misc-card:nth-child(1) li:nth-child(3)', t.honor3);
-        setText('#misc .misc-card:nth-child(1) li:nth-child(4)', t.honor4);
-        setText('#misc .misc-card:nth-child(1) li:nth-child(5)', t.honor5);
-        setHTML('#misc .misc-card:nth-child(3) p', t.beyondDesc);
-
-        setHTML('.footer-content p', t.footerText);
-
-        if (langSwitch) {
-            if (language === 'zh') {
-                langSwitch.textContent = 'EN';
-                langSwitch.setAttribute('aria-label', '切换到英文');
-            } else {
-                langSwitch.textContent = '中';
-                langSwitch.setAttribute('aria-label', 'Switch to Chinese');
-            }
-        }
-
         try {
-            localStorage.setItem(LANGUAGE_KEY, language);
+            const t = translations[language] || translations.zh;
+
+            document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+            document.title = t.pageTitle;
+
+            setHTML('.nav-logo', `${t.navLogo}<span class="dot">.</span>`);
+            setText('.nav-links a[href="#about"]', t.navAbout);
+            setText('.nav-links a[href="#education"]', t.navEducation);
+            setText('.nav-links a[href="#research"]', t.navProjects);
+            setText('.nav-links a[href="#publications"]', t.navPublications);
+            setText('.nav-links a[href="#misc"]', t.navMisc);
+
+            setText('.hero-greeting', t.heroGreeting);
+            setHTML('.hero-tagline', t.heroTagline);
+            setText('.hero-bio', t.heroBio);
+            setHTML('.hero-links .btn-primary', t.emailBtn);
+            setHTML('.hero-links .btn-outline', t.githubBtn);
+            setAttr('.avatar-wrapper img', 'alt', t.avatarAlt);
+
+            setAttr('#navToggle', 'aria-label', t.navToggleAria);
+            setAttr('#backToTop', 'aria-label', t.backToTopAria);
+
+            setHTML('#education .section-title', t.educationTitle);
+            setText('#education .edu-header h3', t.eduSchool);
+            setText('#education .edu-degree', t.eduDegree);
+            setText('#education .edu-date', t.eduDate);
+            setHTML('#education .edu-detail', t.eduDetail);
+
+            setHTML('#research .section-title', t.projectsTitle);
+            setText('#research .research-card:nth-child(1) .research-tag', t.projectCourse);
+            setHTML('#research .research-card:nth-child(1) .research-meta', t.p1Meta);
+            setText('#research .research-card:nth-child(1) > p:not(.research-meta)', t.p1Desc);
+
+            setText('#research .research-card:nth-child(2) .research-tag', t.projectCourse);
+            setHTML('#research .research-card:nth-child(2) .research-meta', t.p2Meta);
+            setText('#research .research-card:nth-child(2) > p:not(.research-meta)', t.p2Desc);
+
+            setText('#research .research-card:nth-child(3) .research-tag', t.projectCourse);
+            setText('#research .research-card:nth-child(3) h3', t.p3Name);
+            setHTML('#research .research-card:nth-child(3) .research-meta', t.p3Meta);
+            setText('#research .research-card:nth-child(3) > p:not(.research-meta)', t.p3Desc);
+
+            setText('#research .research-card:nth-child(4) .research-tag', t.projectPersonal);
+            setText('#research .research-card:nth-child(4) > p:not(.research-meta)', t.p4Desc);
+
+            setText('#research .research-card:nth-child(5) .research-tag', t.projectGroup);
+            setText('#research .research-card:nth-child(5) > p:not(.research-meta)', t.p5Desc);
+
+            setText('#research .research-card:nth-child(6) .research-tag', t.projectGroup);
+            setText('#research .research-card:nth-child(6) > p:not(.research-meta)', t.p6Desc);
+
+            setHTML('#research .research-card:nth-child(1) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
+            setHTML('#research .research-card:nth-child(2) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
+            setHTML('#research .research-card:nth-child(3) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
+            setHTML('#research .research-card:nth-child(4) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
+            setHTML('#research .research-card:nth-child(5) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
+            setHTML('#research .research-card:nth-child(6) .research-links a', `<i class="fab fa-github"></i> ${t.projectCode}`);
+
+            setHTML('#publications .section-title', t.publicationsTitle);
+            setText('#publications .section-subtitle', t.publicationsSubtitle);
+            setText('#publications .empty-state', t.publicationsEmpty);
+
+            setHTML('#misc .section-title', t.miscTitle);
+            setText('#misc .misc-card:nth-child(1) h3', t.miscHonorTitle);
+            setText('#misc .misc-card:nth-child(2) h3', t.miscSkillsTitle);
+            setText('#misc .misc-card:nth-child(3) h3', t.miscBeyondTitle);
+            setText('#misc .misc-card:nth-child(1) li:nth-child(1)', t.honor1);
+            setText('#misc .misc-card:nth-child(1) li:nth-child(2)', t.honor2);
+            setText('#misc .misc-card:nth-child(1) li:nth-child(3)', t.honor3);
+            setText('#misc .misc-card:nth-child(1) li:nth-child(4)', t.honor4);
+            setText('#misc .misc-card:nth-child(1) li:nth-child(5)', t.honor5);
+            setHTML('#misc .misc-card:nth-child(3) p', t.beyondDesc);
+
+            setHTML('.footer-content p', t.footerText);
+
+            if (langSwitch) {
+                if (language === 'zh') {
+                    langSwitch.textContent = 'EN';
+                    langSwitch.setAttribute('aria-label', '切换到英文');
+                } else {
+                    langSwitch.textContent = '中';
+                    langSwitch.setAttribute('aria-label', 'Switch to Chinese');
+                }
+            }
+
+            try {
+                localStorage.setItem(LANGUAGE_KEY, language);
+            } catch (error) {
+                // Ignore storage errors in restricted environments
+            }
         } catch (error) {
-            // Ignore storage errors in restricted environments
+            console.error('Language switch error:', error);
         }
     };
 
     const getInitialLanguage = () => {
         try {
             const savedLanguage = localStorage.getItem(LANGUAGE_KEY);
+            console.log('Saved language from localStorage:', savedLanguage);
             return savedLanguage === 'en' || savedLanguage === 'zh' ? savedLanguage : 'zh';
         } catch (error) {
+            console.warn('localStorage not available:', error);
             return 'zh';
         }
     };
 
     let currentLanguage = getInitialLanguage();
+    console.log('Initial language:', currentLanguage);
     applyLanguage(currentLanguage);
 
     if (langSwitch) {
+        console.log('Language switch button found');
         langSwitch.addEventListener('click', () => {
             currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
+            console.log('Switching to:', currentLanguage);
             applyLanguage(currentLanguage);
         });
+    } else {
+        console.warn('Language switch button not found');
     }
 
     const onScroll = () => {
         const scrollY = window.scrollY;
-        navbar.classList.toggle('scrolled', scrollY > 20);
-        backToTop.classList.toggle('visible', scrollY > 600);
+        if (navbar) {
+            navbar.classList.toggle('scrolled', scrollY > 20);
+        }
+        if (backToTop) {
+            backToTop.classList.toggle('visible', scrollY > 600);
+        }
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -261,19 +276,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.querySelector('.nav-links');
 
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-        // Animate hamburger to X
-        navToggle.classList.toggle('active');
-    });
-
-    // Close mobile menu on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('open');
-            navToggle.classList.remove('active');
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            // Animate hamburger to X
+            navToggle.classList.toggle('active');
         });
-    });
+
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
 
     // ---- Active nav link on scroll ----
     const sections = document.querySelectorAll('section[id], header[id]');
@@ -333,9 +350,11 @@ document.addEventListener('DOMContentLoaded', () => {
     grids.forEach(grid => gridObserver.observe(grid));
 
     // ---- Back to top ----
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // ---- Fun: typed greeting on hero ----
     // (Optional: uncomment if you want a typing effect)
